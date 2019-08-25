@@ -11,7 +11,7 @@ Amended with docker use.
 Please note this is example development build.
 
 ```bash
-git clone https://https://github.com/spital/react_example_text
+git clone https://github.com/spital/react_example_text
 cd react_example_text
 docker build -t react_example_text .
 ```
