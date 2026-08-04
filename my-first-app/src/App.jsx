@@ -1,8 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
-import HideableText from './HideableText';
-import AutoCompleteText from './AutoCompleteText';
+import HideableText from './HideableText.jsx';
+import AutoCompleteText from './AutoCompleteText.jsx';
 import countries from './countries';
 
 function App() {

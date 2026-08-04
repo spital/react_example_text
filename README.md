@@ -16,6 +16,20 @@ cd react_example_text
 docker build -t react_example_text .
 ```
 
+## Local development
+
+Node 24 is recommended. With `mise` installed:
+
+```bash
+mise use -g node@24
+cd my-first-app
+npm ci
+npm start
+```
+
+Open http://localhost:3000. Use `npm run build` for a production bundle and
+`npm test` for the smoke test.
+
 ## Run
 
 ```bash

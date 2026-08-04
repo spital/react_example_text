@@ -16,7 +16,7 @@ render(){
  return (
  <div>
  Click <button onClick={()=>this.toggleIsHidden()}>here to toggle</button>
- >>> {!this.state.isHidden && this.props.text}
+ &gt;&gt;&gt; {!this.state.isHidden && this.props.text}
  </div>
  );
 }

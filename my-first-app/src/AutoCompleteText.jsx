@@ -32,9 +32,10 @@ const { items } = this.props; // for importing countries
 const value = e.target.value;
 let suggestions = [];
 if (value.length > 0) {
-const regex = new RegExp(`^${value}`, 'i');
+const escapedValue = value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+const regex = new RegExp(`^${escapedValue}`, 'i');
 /* suggestions = this.items.sort().filter(v => regex.test(v));  // list of names */
-suggestions = items.sort().filter(v => regex.test(v));  // list of countries
+suggestions = [...items].sort().filter(v => regex.test(v));  // list of countries
 }
 this.setState(() => ({ suggestions, text: value }));
 }
@@ -55,7 +56,7 @@ return null;
 }
 return (
 <ul>
-{suggestions.map((item) => <li onClick={() => this.suggestionSelected(item)}>{item}</li>)}
+{suggestions.map((item) => <li key={item} onClick={() => this.suggestionSelected(item)}>{item}</li>)}
 </ul>
 );
 }

@@ -1,0 +1,6 @@
+**/node_modules
+my-first-app/dist
+my-first-app/build
+npm-debug.log*
+.git
+.gitignore
